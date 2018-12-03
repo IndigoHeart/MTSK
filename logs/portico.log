@@ -1,0 +1,553 @@
+DEBUG [main] portico.lrc: Creating new LRC
+DEBUG [main] portico.lrc: Messaging framework configuration complete
+INFO  [main] portico.lrc: LRC initialized (HLA version: HLA13)
+INFO  [main] portico.lrc: Opening LrcConnection
+INFO  [main] portico.lrc.jgroups: Starting JGroups LrcConnection...
+DEBUG [main] portico.lrc: Parsing FED file (format=ieee1516): file:/C:/Users/rafal/Desktop/Symulacja%20projekt%20Kołacz/Przykładowy%20projekt/CashDesk/CashDesk.xml
+ERROR [main] portico.lrc: Error opening fed file: C:\Users\rafal\Desktop\Symulacja projekt Kołacz\Przykładowy projekt\CashDesk\HLA.dtd (Nie można odnaleźć określonego pliku)
+org.portico.lrc.compat.JCouldNotOpenFED: Error opening fed file: C:\Users\rafal\Desktop\Symulacja projekt Kołacz\Przykładowy projekt\CashDesk\HLA.dtd (Nie można odnaleźć określonego pliku)
+	at org.portico.impl.hla1516.fomparser.FOM.parseFOM(FOM.java:491)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.parseFed(CreateFederationHandler.java:143)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:66)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at Client.ClientFederate.runFederate(ClientFederate.java:27)
+	at Client.ClientFederate.main(ClientFederate.java:181)
+Caused by: java.io.FileNotFoundException: C:\Users\rafal\Desktop\Symulacja projekt Kołacz\Przykładowy projekt\CashDesk\HLA.dtd (Nie można odnaleźć określonego pliku)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:623)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.startEntity(XMLEntityManager.java:1304)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.startDTDEntity(XMLEntityManager.java:1270)
+	at com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl.setInputSource(XMLDTDScannerImpl.java:264)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1161)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1045)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:959)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at org.portico.impl.hla1516.fomparser.ParserWrapper.parse(ParserWrapper.java:99)
+	at org.portico.impl.hla1516.fomparser.FOM.parseFOM(FOM.java:483)
+	... 8 more
+DEBUG [main] portico.lrc: Creating new LRC
+DEBUG [main] portico.lrc: Messaging framework configuration complete
+INFO  [main] portico.lrc: LRC initialized (HLA version: HLA13)
+INFO  [main] portico.lrc: Opening LrcConnection
+INFO  [main] portico.lrc.jgroups: Starting JGroups LrcConnection...
+DEBUG [main] portico.lrc: Parsing FED file (format=ieee1516): file:/C:/Users/rafal/Desktop/Symulacja%20projekt%20Kołacz/Przykładowy%20projekt/CashDesk/CashDesk.xml
+DEBUG [main] portico.lrc: ATTEMPT Create federation execution [CashdeskCilentFederation]
+DEBUG [main] portico.lrc.jgroups: SUCCESS connected to channel [CashdeskCilentFederation]
+INFO  [Incoming-4,CashdeskCilentFederation,DESKTOP-CDUEFPD-33538] portico.lrc.jgroups: Federation [CashdeskCilentFederation] has been created
+INFO  [main] portico.lrc.jgroups: SUCCESS createFederation: name=CashdeskCilentFederation
+INFO  [main] portico.lrc: SUCCESS Created federation execution [CashdeskCilentFederation]
+DEBUG [main] portico.lrc: ATTEMPT Join federate [ClientFederate] to federation [CashdeskCilentFederation]
+INFO  [Incoming-3,CashdeskCilentFederation,DESKTOP-CDUEFPD-33538] portico.lrc.jgroups: Federate [ClientFederate] joined federation [CashdeskCilentFederation]
+INFO  [main] portico.lrc: SUCCESS Joined federate [ClientFederate] to federation [CashdeskCilentFederation]: handle=1
+INFO  [main] portico.lrc: FOM in use for federation [CashdeskCilentFederation]:
+== Beginning Object Model Render ==
+===================================
+==        Routing Spaces         ==
+===================================
+===================================
+==        Object Classes         ==
+===================================
+-> (object class): HLAobjectRoot (handle: 501)
+       (attribute): HLAprivilegeToDeleteObject, handle=547, order=TIMESTAMP, transport=RELIABLE, space=null
+    -> (object class): HLAmanager (handle: 1)
+        -> (object class): HLAfederation (handle: 3)
+               (attribute): HLAconveyRegionDesignatorSets, handle=42, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlastSaveTime,               handle=38, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLARTIversion,                 handle=35, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAFDDID,                      handle=36, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAnextSaveTime,               handle=40, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederatesInFederation,      handle=34, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAautoProvide,                handle=41, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederationName,             handle=33, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlastSaveName,               handle=37, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAnextSaveName,               handle=39, order=RECEIVE, transport=RELIABLE, space=null
+        -> (object class): HLAfederate (handle: 2)
+               (attribute): HLARTIversion,                      handle=7, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlogicalTime,                     handle=14, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAreflectionsReceived,             handle=21, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeConstrained,                 handle=9, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAFDDID,                           handle=8, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLALITS,                            handle=18, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesThatCanBeDeleted, handle=24, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateHost,                    handle=6, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLATSOlength,                       handle=20, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlookahead,                       handle=15, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeAdvancingTime,               handle=32, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAinteractionsReceived,            handle=22, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAROlength,                        handle=19, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesReflected,        handle=26, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesRemoved,          handle=28, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeRegulating,                  handle=10, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateState,                   handle=12, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesRegistered,       handle=29, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeGrantedTime,                 handle=31, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateType,                    handle=5, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesDeleted,          handle=27, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesUpdated,          handle=25, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateHandle,                  handle=4, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLALBTS,                            handle=16, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAinteractionsSent,                handle=23, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesDiscovered,       handle=30, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAGALT,                            handle=17, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAasynchronousDelivery,            handle=11, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeManagerState,                handle=13, order=RECEIVE, transport=RELIABLE, space=null
+    -> (object class): Client (handle: 502)
+           (attribute): przywilej, handle=503, order=RECEIVE, transport=BEST_EFFORT, space=null
+           (attribute): time,      handle=504, order=RECEIVE, transport=BEST_EFFORT, space=null
+===================================
+==      Interaction Classes      ==
+===================================
+-> (interaction class): HLAinteractionRoot (handle: 548, order=TIMESTAMP, transport=RELIABLE, space=null)
+    -> (interaction class): liczbaOtwartychKas (handle: 555, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): liczbaOtwartychKas, handle=556
+    -> (interaction class): liczbaWkolejkach (handle: 553, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): liczbaWkolejkach, handle=554
+    -> (interaction class): HLAmanager (handle: 557, order=RECEIVE, transport=RELIABLE, space=null)
+        -> (interaction class): HLAfederate (handle: 558, order=RECEIVE, transport=RELIABLE, space=null)
+               (parameter): HLAfederate, handle=716
+            -> (interaction class): HLAreport (handle: 586, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAreportSynchronizationPoints (handle: 637, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsyncPoints, handle=638
+                -> (interaction class): HLAreportInteractionPublication (handle: 596, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClassList, handle=597
+                -> (interaction class): HLAreportObjectInstancesUpdated (handle: 602, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=603
+                -> (interaction class): HLAreportException (handle: 623, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAservice,   handle=624
+                       (parameter): HLAexception, handle=625
+                -> (interaction class): HLAreportObjectInstanceInformation (handle: 618, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAownedInstanceAttributeList, handle=620
+                       (parameter): HLAobjectInstance,             handle=619
+                       (parameter): HLAknownClass,                 handle=622
+                       (parameter): HLAregisteredClass,            handle=621
+                -> (interaction class): HLAreportObjectClassSubscription (handle: 591, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAnumberOfClasses, handle=592
+                       (parameter): HLAactive,          handle=594
+                       (parameter): HLAattributeList,   handle=595
+                       (parameter): HLAobjectClass,     handle=593
+                -> (interaction class): HLAreportMOMexception (handle: 633, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAexception,      handle=635
+                       (parameter): HLAparameterError, handle=636
+                       (parameter): HLAservice,        handle=634
+                -> (interaction class): HLAreportObjectClassPublication (handle: 587, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,     handle=589
+                       (parameter): HLAattributeList,   handle=590
+                       (parameter): HLAnumberOfClasses, handle=588
+                -> (interaction class): HLAreportReflectionsReceived (handle: 609, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtransportation, handle=610
+                       (parameter): HLAreflectCounts,  handle=611
+                -> (interaction class): HLAreportServiceInvocation (handle: 626, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAexception,         handle=631
+                       (parameter): HLAreturnedArguments, handle=630
+                       (parameter): HLAservice,           handle=627
+                       (parameter): HLAsuccessIndicator,  handle=628
+                       (parameter): HLAsuppliedArguments, handle=629
+                       (parameter): HLAserialNumber,      handle=632
+                -> (interaction class): HLAreportSynchronizationPointStatus (handle: 639, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsyncPointName,      handle=640
+                       (parameter): HLAsyncPointFederates, handle=641
+                -> (interaction class): HLAreportInteractionsSent (handle: 612, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionCounts, handle=614
+                       (parameter): HLAtransportation,    handle=613
+                -> (interaction class): HLAreportInteractionSubscription (handle: 598, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClassList, handle=599
+                -> (interaction class): HLAreportObjectInstancesThatCanBeDeleted (handle: 600, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=601
+                -> (interaction class): HLAreportUpdatesSent (handle: 606, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtransportation, handle=607
+                       (parameter): HLAupdateCounts,   handle=608
+                -> (interaction class): HLAreportObjectInstancesReflected (handle: 604, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=605
+                -> (interaction class): HLAreportInteractionsReceived (handle: 615, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionCounts, handle=617
+                       (parameter): HLAtransportation,    handle=616
+            -> (interaction class): HLAservice (handle: 642, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAmodifyLookahead (handle: 707, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlookahead, handle=708
+                -> (interaction class): HLAchangeAttributeTransportationType (handle: 680, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=681
+                       (parameter): HLAattributeList,  handle=682
+                       (parameter): HLAtransportation, handle=683
+                -> (interaction class): HLAunsubscribeInteractionClass (handle: 672, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=673
+                -> (interaction class): HLAnextMessageRequest (handle: 699, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=700
+                -> (interaction class): HLAunpublishInteractionClass (handle: 660, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=661
+                -> (interaction class): HLAchangeInteractionOrderType (handle: 713, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsendOrder,        handle=715
+                       (parameter): HLAinteractionClass, handle=714
+                -> (interaction class): HLAtimeAdvanceRequest (handle: 695, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=696
+                -> (interaction class): HLAdisableAsynchronousDelivery (handle: 706, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAchangeInteractionTransportationType (handle: 684, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=685
+                       (parameter): HLAtransportation,   handle=686
+                -> (interaction class): HLAnextMessageRequestAvailable (handle: 701, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=702
+                -> (interaction class): HLApublishInteractionClass (handle: 658, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=659
+                -> (interaction class): HLAenableAsynchronousDelivery (handle: 705, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAfederateSaveComplete (handle: 648, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuccessIndicator, handle=649
+                -> (interaction class): HLAlocalDeleteObjectInstance (handle: 678, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=679
+                -> (interaction class): HLAfederateSaveBegun (handle: 647, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAfederateRestoreComplete (handle: 650, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuccessIndicator, handle=651
+                -> (interaction class): HLAtimeAdvanceRequestAvailable (handle: 697, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=698
+                -> (interaction class): HLAenableTimeConstrained (handle: 693, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAdisableTimeRegulation (handle: 692, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsubscribeObjectClassAttributes (handle: 662, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList, handle=664
+                       (parameter): HLAactive,        handle=665
+                       (parameter): HLAobjectClass,   handle=663
+                -> (interaction class): HLAunconditionalAttributeOwnershipDivestiture (handle: 687, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=688
+                       (parameter): HLAattributeList,  handle=689
+                -> (interaction class): HLAresignFederationExecution (handle: 643, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAresignAction, handle=644
+                -> (interaction class): HLApublishObjectClassAttributes (handle: 652, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList, handle=654
+                       (parameter): HLAobjectClass,   handle=653
+                -> (interaction class): HLAenableTimeRegulation (handle: 690, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlookahead, handle=691
+                -> (interaction class): HLAsubscribeInteractionClass (handle: 669, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAactive,           handle=671
+                       (parameter): HLAinteractionClass, handle=670
+                -> (interaction class): HLAchangeAttributeOrderType (handle: 709, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsendOrder,      handle=712
+                       (parameter): HLAattributeList,  handle=711
+                       (parameter): HLAobjectInstance, handle=710
+                -> (interaction class): HLAunpublishObjectClassAttributes (handle: 655, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,   handle=656
+                       (parameter): HLAattributeList, handle=657
+                -> (interaction class): HLAsynchronizationPointAchieved (handle: 645, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlabel, handle=646
+                -> (interaction class): HLAdisableTimeConstrained (handle: 694, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAunsubscribeObjectClassAttributes (handle: 666, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList, handle=668
+                       (parameter): HLAobjectClass,   handle=667
+                -> (interaction class): HLAdeleteObjectInstance (handle: 674, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtag,            handle=676
+                       (parameter): HLAtimeStamp,      handle=677
+                       (parameter): HLAobjectInstance, handle=675
+                -> (interaction class): HLAflushQueueRequest (handle: 703, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=704
+            -> (interaction class): HLAadjust (handle: 559, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAmodifyAttributeState (handle: 562, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattribute,      handle=564
+                       (parameter): HLAobjectInstance, handle=563
+                       (parameter): HLAattributeState, handle=565
+                -> (interaction class): HLAsetExceptionReporting (handle: 568, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportingState, handle=569
+                -> (interaction class): HLAsetSwitches (handle: 570, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAconveyRegionDesignatorSets, handle=571
+                -> (interaction class): HLAsetServiceReporting (handle: 566, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportingState, handle=567
+                -> (interaction class): HLAsetTiming (handle: 560, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportPeriod, handle=561
+            -> (interaction class): HLArequest (handle: 572, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestUpdatesSent (handle: 578, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSubscriptions (handle: 574, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesUpdated (handle: 576, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestPublications (handle: 573, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstanceInformation (handle: 582, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=583
+                -> (interaction class): HLArequestReflectionsReceived (handle: 580, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesThatCanBeDeleted (handle: 575, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestInteractionsSent (handle: 579, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSynchronizationPointStatus (handle: 585, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesReflected (handle: 577, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestInteractionsReceived (handle: 581, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSynchronizationPoints (handle: 584, order=RECEIVE, transport=RELIABLE, space=null)
+        -> (interaction class): HLAfederation (handle: 717, order=RECEIVE, transport=RELIABLE, space=null)
+            -> (interaction class): HLAadjust (handle: 718, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsetSwitches (handle: 719, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAautoProvide, handle=720
+    -> (interaction class): najkrotszaKolejka (handle: 549, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): numerKasy, handle=550
+    -> (interaction class): wyslanieDoKasy (handle: 551, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): uprzywilejowany, handle=552
+
+DEBUG [main] portico.lrc: ATTEMPT Register sync point [ReadyToRun] by [ClientFederate]
+DEBUG [main] portico.lrc: PENDING Register synchronization point [ReadyToRun] by [ClientFederate]
+INFO  [main] portico.lrc: SUCCESS Registered sync point [ReadyToRun] by [ClientFederate]
+DEBUG [main] portico.lrc: DISCARD Discovery of object (not subscribed): object=1
+DEBUG [main] portico.lrc: Creating new LRC
+DEBUG [main] portico.lrc: Messaging framework configuration complete
+INFO  [main] portico.lrc: LRC initialized (HLA version: HLA13)
+INFO  [main] portico.lrc: Opening LrcConnection
+INFO  [main] portico.lrc.jgroups: Starting JGroups LrcConnection...
+DEBUG [main] portico.lrc: Parsing FED file (format=ieee1516): file:/C:/Users/rafal/Desktop/Symulacja%20projekt%20Kołacz/Przykładowy%20projekt/CashDesk/CashDesk.xml
+DEBUG [main] portico.lrc: ATTEMPT Create federation execution [CashdeskCilentFederation]
+DEBUG [main] portico.lrc.jgroups: SUCCESS connected to channel [CashdeskCilentFederation]
+INFO  [Incoming-4,CashdeskCilentFederation,DESKTOP-CDUEFPD-5809] portico.lrc.jgroups: Federation [CashdeskCilentFederation] has been created
+INFO  [main] portico.lrc.jgroups: SUCCESS createFederation: name=CashdeskCilentFederation
+INFO  [main] portico.lrc: SUCCESS Created federation execution [CashdeskCilentFederation]
+DEBUG [main] portico.lrc: ATTEMPT Join federate [ClientFederate] to federation [CashdeskCilentFederation]
+INFO  [Incoming-3,CashdeskCilentFederation,DESKTOP-CDUEFPD-5809] portico.lrc.jgroups: Federate [ClientFederate] joined federation [CashdeskCilentFederation]
+INFO  [main] portico.lrc: SUCCESS Joined federate [ClientFederate] to federation [CashdeskCilentFederation]: handle=1
+INFO  [main] portico.lrc: FOM in use for federation [CashdeskCilentFederation]:
+== Beginning Object Model Render ==
+===================================
+==        Routing Spaces         ==
+===================================
+===================================
+==        Object Classes         ==
+===================================
+-> (object class): HLAobjectRoot (handle: 501)
+       (attribute): HLAprivilegeToDeleteObject, handle=547, order=TIMESTAMP, transport=RELIABLE, space=null
+    -> (object class): Client (handle: 502)
+           (attribute): przywilej, handle=503, order=RECEIVE, transport=BEST_EFFORT, space=null
+           (attribute): time,      handle=504, order=RECEIVE, transport=BEST_EFFORT, space=null
+    -> (object class): HLAmanager (handle: 1)
+        -> (object class): HLAfederate (handle: 2)
+               (attribute): HLARTIversion,                      handle=7, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlogicalTime,                     handle=14, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAreflectionsReceived,             handle=21, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeConstrained,                 handle=9, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAFDDID,                           handle=8, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLALITS,                            handle=18, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesThatCanBeDeleted, handle=24, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateHost,                    handle=6, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLATSOlength,                       handle=20, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlookahead,                       handle=15, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeAdvancingTime,               handle=32, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAinteractionsReceived,            handle=22, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAROlength,                        handle=19, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesReflected,        handle=26, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesRemoved,          handle=28, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeRegulating,                  handle=10, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateState,                   handle=12, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesRegistered,       handle=29, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeGrantedTime,                 handle=31, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateType,                    handle=5, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesDeleted,          handle=27, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesUpdated,          handle=25, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateHandle,                  handle=4, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLALBTS,                            handle=16, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAinteractionsSent,                handle=23, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesDiscovered,       handle=30, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAGALT,                            handle=17, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAasynchronousDelivery,            handle=11, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeManagerState,                handle=13, order=RECEIVE, transport=RELIABLE, space=null
+        -> (object class): HLAfederation (handle: 3)
+               (attribute): HLAconveyRegionDesignatorSets, handle=42, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlastSaveTime,               handle=38, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLARTIversion,                 handle=35, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAFDDID,                      handle=36, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAnextSaveTime,               handle=40, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederatesInFederation,      handle=34, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAautoProvide,                handle=41, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederationName,             handle=33, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlastSaveName,               handle=37, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAnextSaveName,               handle=39, order=RECEIVE, transport=RELIABLE, space=null
+===================================
+==      Interaction Classes      ==
+===================================
+-> (interaction class): HLAinteractionRoot (handle: 548, order=TIMESTAMP, transport=RELIABLE, space=null)
+    -> (interaction class): wyslanieDoKasy (handle: 551, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): uprzywilejowany, handle=552
+    -> (interaction class): liczbaOtwartychKas (handle: 555, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): liczbaOtwartychKas, handle=556
+    -> (interaction class): liczbaWkolejkach (handle: 553, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): liczbaWkolejkach, handle=554
+    -> (interaction class): najkrotszaKolejka (handle: 549, order=RECEIVE, transport=BEST_EFFORT, space=null)
+           (parameter): numerKasy, handle=550
+    -> (interaction class): HLAmanager (handle: 557, order=RECEIVE, transport=RELIABLE, space=null)
+        -> (interaction class): HLAfederate (handle: 558, order=RECEIVE, transport=RELIABLE, space=null)
+               (parameter): HLAfederate, handle=716
+            -> (interaction class): HLAservice (handle: 642, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAchangeAttributeTransportationType (handle: 680, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=681
+                       (parameter): HLAattributeList,  handle=682
+                       (parameter): HLAtransportation, handle=683
+                -> (interaction class): HLAlocalDeleteObjectInstance (handle: 678, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=679
+                -> (interaction class): HLAtimeAdvanceRequest (handle: 695, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=696
+                -> (interaction class): HLAenableAsynchronousDelivery (handle: 705, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLApublishInteractionClass (handle: 658, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=659
+                -> (interaction class): HLAenableTimeConstrained (handle: 693, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAunpublishInteractionClass (handle: 660, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=661
+                -> (interaction class): HLAdisableTimeConstrained (handle: 694, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAtimeAdvanceRequestAvailable (handle: 697, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=698
+                -> (interaction class): HLAunsubscribeObjectClassAttributes (handle: 666, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList, handle=668
+                       (parameter): HLAobjectClass,   handle=667
+                -> (interaction class): HLAnextMessageRequestAvailable (handle: 701, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=702
+                -> (interaction class): HLAfederateSaveBegun (handle: 647, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAdisableTimeRegulation (handle: 692, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLApublishObjectClassAttributes (handle: 652, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList, handle=654
+                       (parameter): HLAobjectClass,   handle=653
+                -> (interaction class): HLAunconditionalAttributeOwnershipDivestiture (handle: 687, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=688
+                       (parameter): HLAattributeList,  handle=689
+                -> (interaction class): HLAflushQueueRequest (handle: 703, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=704
+                -> (interaction class): HLAsubscribeObjectClassAttributes (handle: 662, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList, handle=664
+                       (parameter): HLAobjectClass,   handle=663
+                       (parameter): HLAactive,        handle=665
+                -> (interaction class): HLAchangeInteractionTransportationType (handle: 684, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=685
+                       (parameter): HLAtransportation,   handle=686
+                -> (interaction class): HLAenableTimeRegulation (handle: 690, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlookahead, handle=691
+                -> (interaction class): HLAdisableAsynchronousDelivery (handle: 706, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAmodifyLookahead (handle: 707, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlookahead, handle=708
+                -> (interaction class): HLAfederateRestoreComplete (handle: 650, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuccessIndicator, handle=651
+                -> (interaction class): HLAdeleteObjectInstance (handle: 674, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtag,            handle=676
+                       (parameter): HLAtimeStamp,      handle=677
+                       (parameter): HLAobjectInstance, handle=675
+                -> (interaction class): HLAnextMessageRequest (handle: 699, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=700
+                -> (interaction class): HLAunpublishObjectClassAttributes (handle: 655, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,   handle=656
+                       (parameter): HLAattributeList, handle=657
+                -> (interaction class): HLAsubscribeInteractionClass (handle: 669, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=670
+                       (parameter): HLAactive,           handle=671
+                -> (interaction class): HLAchangeAttributeOrderType (handle: 709, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=710
+                       (parameter): HLAattributeList,  handle=711
+                       (parameter): HLAsendOrder,      handle=712
+                -> (interaction class): HLAunsubscribeInteractionClass (handle: 672, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=673
+                -> (interaction class): HLAchangeInteractionOrderType (handle: 713, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsendOrder,        handle=715
+                       (parameter): HLAinteractionClass, handle=714
+                -> (interaction class): HLAfederateSaveComplete (handle: 648, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuccessIndicator, handle=649
+                -> (interaction class): HLAresignFederationExecution (handle: 643, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAresignAction, handle=644
+                -> (interaction class): HLAsynchronizationPointAchieved (handle: 645, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlabel, handle=646
+            -> (interaction class): HLArequest (handle: 572, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestReflectionsReceived (handle: 580, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSubscriptions (handle: 574, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesReflected (handle: 577, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestPublications (handle: 573, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestInteractionsSent (handle: 579, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestInteractionsReceived (handle: 581, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesThatCanBeDeleted (handle: 575, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesUpdated (handle: 576, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestUpdatesSent (handle: 578, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstanceInformation (handle: 582, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=583
+                -> (interaction class): HLArequestSynchronizationPoints (handle: 584, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSynchronizationPointStatus (handle: 585, order=RECEIVE, transport=RELIABLE, space=null)
+            -> (interaction class): HLAadjust (handle: 559, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsetTiming (handle: 560, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportPeriod, handle=561
+                -> (interaction class): HLAsetExceptionReporting (handle: 568, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportingState, handle=569
+                -> (interaction class): HLAmodifyAttributeState (handle: 562, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattribute,      handle=564
+                       (parameter): HLAattributeState, handle=565
+                       (parameter): HLAobjectInstance, handle=563
+                -> (interaction class): HLAsetServiceReporting (handle: 566, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportingState, handle=567
+                -> (interaction class): HLAsetSwitches (handle: 570, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAconveyRegionDesignatorSets, handle=571
+            -> (interaction class): HLAreport (handle: 586, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAreportInteractionSubscription (handle: 598, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClassList, handle=599
+                -> (interaction class): HLAreportInteractionsSent (handle: 612, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionCounts, handle=614
+                       (parameter): HLAtransportation,    handle=613
+                -> (interaction class): HLAreportObjectClassSubscription (handle: 591, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList,   handle=595
+                       (parameter): HLAactive,          handle=594
+                       (parameter): HLAnumberOfClasses, handle=592
+                       (parameter): HLAobjectClass,     handle=593
+                -> (interaction class): HLAreportObjectInstanceInformation (handle: 618, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAknownClass,                 handle=622
+                       (parameter): HLAownedInstanceAttributeList, handle=620
+                       (parameter): HLAobjectInstance,             handle=619
+                       (parameter): HLAregisteredClass,            handle=621
+                -> (interaction class): HLAreportSynchronizationPointStatus (handle: 639, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsyncPointFederates, handle=641
+                       (parameter): HLAsyncPointName,      handle=640
+                -> (interaction class): HLAreportException (handle: 623, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAservice,   handle=624
+                       (parameter): HLAexception, handle=625
+                -> (interaction class): HLAreportServiceInvocation (handle: 626, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreturnedArguments, handle=630
+                       (parameter): HLAexception,         handle=631
+                       (parameter): HLAsuppliedArguments, handle=629
+                       (parameter): HLAservice,           handle=627
+                       (parameter): HLAserialNumber,      handle=632
+                       (parameter): HLAsuccessIndicator,  handle=628
+                -> (interaction class): HLAreportObjectClassPublication (handle: 587, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAnumberOfClasses, handle=588
+                       (parameter): HLAattributeList,   handle=590
+                       (parameter): HLAobjectClass,     handle=589
+                -> (interaction class): HLAreportInteractionsReceived (handle: 615, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionCounts, handle=617
+                       (parameter): HLAtransportation,    handle=616
+                -> (interaction class): HLAreportSynchronizationPoints (handle: 637, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsyncPoints, handle=638
+                -> (interaction class): HLAreportObjectInstancesThatCanBeDeleted (handle: 600, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=601
+                -> (interaction class): HLAreportObjectInstancesUpdated (handle: 602, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=603
+                -> (interaction class): HLAreportInteractionPublication (handle: 596, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClassList, handle=597
+                -> (interaction class): HLAreportUpdatesSent (handle: 606, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtransportation, handle=607
+                       (parameter): HLAupdateCounts,   handle=608
+                -> (interaction class): HLAreportMOMexception (handle: 633, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAexception,      handle=635
+                       (parameter): HLAservice,        handle=634
+                       (parameter): HLAparameterError, handle=636
+                -> (interaction class): HLAreportReflectionsReceived (handle: 609, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreflectCounts,  handle=611
+                       (parameter): HLAtransportation, handle=610
+                -> (interaction class): HLAreportObjectInstancesReflected (handle: 604, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=605
+        -> (interaction class): HLAfederation (handle: 717, order=RECEIVE, transport=RELIABLE, space=null)
+            -> (interaction class): HLAadjust (handle: 718, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsetSwitches (handle: 719, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAautoProvide, handle=720
+
+DEBUG [main] portico.lrc: ATTEMPT Register sync point [ReadyToRun] by [ClientFederate]
+DEBUG [main] portico.lrc: PENDING Register synchronization point [ReadyToRun] by [ClientFederate]
+INFO  [main] portico.lrc: SUCCESS Registered sync point [ReadyToRun] by [ClientFederate]
+DEBUG [main] portico.lrc: DISCARD Discovery of object (not subscribed): object=1
+INFO  [main] portico.lrc: NOTICE  Federate [ClientFederate] achieved sync point [ReadyToRun]
+DEBUG [main] portico.lrc: @REMOTE Federate [ClientFederate] ACHIEVED synchronization point [ReadyToRun]
+INFO  [main] portico.lrc: Federation SYNCHRONIZED on point [ReadyToRun], queued callback
+DEBUG [main] portico.lrc: REQUEST Enable time regulation for [ClientFederate]: fedtime=0.0, lookahead=1.0
+INFO  [main] portico.lrc: PENDING Enable time regulation PENDING for [ClientFederate]
+DEBUG [main] portico.lrc: @REMOTE Federate [ClientFederate] requests ENABLE time regulation (fedtime=0.0, lookahead=1.0)
+DEBUG [main] portico.lrc: ENABLED time regulating for [ClientFederate] (fedtime=0.0)
+DEBUG [main] portico.lrc: REQUEST Enable time constrained for [ClientFederate]
+INFO  [main] portico.lrc: PENDING Enable time constrained PENDING for [ClientFederate]
+DEBUG [main] portico.lrc: @REMOTE Federate [ClientFederate] requests ENABLE time constrained
+INFO  [main] portico.lrc: ENABLED time constrained for [ClientFederate]
