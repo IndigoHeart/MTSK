@@ -13,19 +13,21 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class ShopFederate {
     private RTIambassador rtiamb;
     private ShopAmbassador fedamb;
 
-LinkedList<Client> klienciWsklepie =new LinkedList<Client>();
+    public LinkedList<Client> klienciWsklepie = new LinkedList<Client>();
 
-    public void runFederate() throws RTIexception {
+    public void runFederate() throws RTIexception, InterruptedException {
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
         try{
             File fom = new File( "CashDesk.xml" );
-            rtiamb.createFederationExecution( "CashdeskCilentFederation",
+            rtiamb.createFederationExecution( "CashDeskClientFederation",
                     fom.toURI().toURL() );
             log( "Created Federation" );
         }
@@ -39,7 +41,7 @@ LinkedList<Client> klienciWsklepie =new LinkedList<Client>();
         }
 
         fedamb = new ShopAmbassador(this);
-        rtiamb.joinFederationExecution( "ShopFederate", "CashdeskCilentFederation", fedamb );
+        rtiamb.joinFederationExecution( "ShopFederate", "CashDeskClientFederation", fedamb );
         log( "Joined Federation as ShopFederate");
 
         rtiamb.registerFederationSynchronizationPoint( ClientAmbassador.READY_TO_RUN, null );
@@ -68,6 +70,8 @@ LinkedList<Client> klienciWsklepie =new LinkedList<Client>();
             System.out.println(" klientów w sklepie jest "+klienciWsklepie.size());
             //Shop Shop=new Shop(randomizePrivileg(20), (int)(25*randomTime()));
             //publishShop(Shop);
+            advanceTime(50);
+            sendInteractionprzejdzDoKolejki(fedamb.federateTime + fedamb.federateLookahead);
 
         }
     }
@@ -143,10 +147,35 @@ LinkedList<Client> klienciWsklepie =new LinkedList<Client>();
 
         rtiamb.subscribeObjectClassAttributes(klientHandle,attributes);
 
-
+        //przejdz do kolejki publish interaction
+        int przejdzDoKolejkiHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.przejdzDoKolejki" );
+        rtiamb.publishInteractionClass(przejdzDoKolejkiHandle);
+        //int privilegedHandle = rtiamb.getParameterHandle(przejdzDoKolejkiHandle, "InteractionRoot.")
 
     }
 
+    public Boolean goToQueue(){
+            return klienciWsklepie.remove().getPrivileged();
+    }
+
+    private void sendInteractionprzejdzDoKolejki(double timeStep) throws RTIexception {
+        try{
+            SuppliedParameters parameters =
+                    RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+
+            byte[] privileged = EncodingHelpers.encodeBoolean(goToQueue());
+
+            int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.przejdzDoKolejki");
+            int privilegedHandle = rtiamb.getParameterHandle( "privileged", interactionHandle );
+
+            parameters.add(privilegedHandle, privileged);
+
+            LogicalTime time = convertTime( timeStep );
+            rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
+        }catch (NoSuchElementException e){
+        }
+
+    }
 
     private void advanceTime( double timestep ) throws RTIexception
     {
@@ -177,6 +206,8 @@ LinkedList<Client> klienciWsklepie =new LinkedList<Client>();
         }
         catch( RTIexception rtie ){
             rtie.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

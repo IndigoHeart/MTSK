@@ -24,7 +24,7 @@ public class ClientFederate {
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
         try{
             File fom = new File( "CashDesk.xml" );
-            rtiamb.createFederationExecution( "CashdeskCilentFederation",
+            rtiamb.createFederationExecution( "CashDeskClientFederation",
             fom.toURI().toURL() );
             log( "Created Federation" );
         }
@@ -38,7 +38,7 @@ public class ClientFederate {
         }
 
         fedamb = new ClientAmbassador(this);
-        rtiamb.joinFederationExecution( "ClientFederate", "CashdeskCilentFederation", fedamb );
+        rtiamb.joinFederationExecution( "ClientFederate", "CashDeskClientFederation", fedamb );
         log( "Joined Federation as ClientFederate");
 
         rtiamb.registerFederationSynchronizationPoint( READY_TO_RUN, null );
@@ -166,11 +166,11 @@ public class ClientFederate {
         int przywilejHandle    = rtiamb.getAttributeHandle( "przywilej", klientClassHandle );
         int timeHandle    = rtiamb.getAttributeHandle( "time", klientClassHandle );
         SuppliedAttributes attributes = RtiFactoryFactory.getRtiFactory().createSuppliedAttributes();
-        byte[] przywilejValue = EncodingHelpers.encodeBoolean(client.privileged);
-        log(Integer.toString(client.time_of_shopping));
-        log(Boolean.toString(client.privileged));
+        byte[] przywilejValue = EncodingHelpers.encodeBoolean(client.getPrivileged());
+        log(Integer.toString(client.getTimeOfShopping()));
+        log(Boolean.toString(client.getPrivileged()));
 
-        byte[] timeValue = EncodingHelpers.encodeInt(client.time_of_shopping);
+        byte[] timeValue = EncodingHelpers.encodeInt(client.getTimeOfShopping());
         attributes.add(przywilejHandle, przywilejValue);
         attributes.add(timeHandle, timeValue);
         rtiamb.updateAttributeValues( klientHandle, attributes, "klient attributes".getBytes());

@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Sklep/ShopFederate.java" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="abfe42bc-3bcb-40e9-a806-dedb190aa1c5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/portico.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Client/ClientAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Client/ClientAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CashDesk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CashDesk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RTI.rid" beforeDir="false" afterPath="$PROJECT_DIR$/RTI.rid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Client/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Client/ClientFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Client/ClientFederate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Sklep/ShopAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Sklep/ShopAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskFederate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Sklep/ShopFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Sklep/ShopFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/ClientFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ClientFederate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sklep/ShopAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sklep/ShopAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sklep/ShopFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sklep/ShopFederate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,32 +28,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientFederate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Client/ClientFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopFederate.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Sklep/ShopFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="140" column="42" lean-forward="true" selection-start-line="140" selection-start-column="42" selection-end-line="141" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="CashDeskFederate.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="293">
+                  <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="CashDeskAmbassador.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="293">
+                  <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,9 +76,7 @@
       <find>random</find>
       <find>dtd</find>
       <find>cli</find>
-      <find>client</find>
       <find>&quot;</find>
-      <find>shop</find>
       <find>nrkolejki</find>
       <find>przy</find>
       <find>publishAndSubscribe</find>
@@ -72,16 +85,32 @@
       <find>&lt;objectClass</find>
       <find>503</find>
       <find>ref</find>
-      <find>publishClient</find>
       <find>fed</find>
+      <find>attribute</find>
+      <find>tag</find>
+      <find>przejdzdo</find>
+      <find>CashdeskFederate</find>
+      <find>client</find>
+      <find>Shop</find>
+      <find>shopfederate</find>
+      <find>cashdesk</find>
       <find>advanceTime</find>
+      <find>publishClient</find>
+      <find>shop</find>
     </findStrings>
     <replaceStrings>
       <replace>shop</replace>
+      <replace>CashDeskFederate</replace>
+      <replace>CashDesk</replace>
       <replace>Shop</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="IndigoHeart &lt;35193932+indigoheart@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -98,12 +127,15 @@
         <option value="$PROJECT_DIR$/src/Klient/ClientFederate.java" />
         <option value="$PROJECT_DIR$/src/enumerable.java" />
         <option value="$PROJECT_DIR$/src/Enumerable.java" />
+        <option value="$PROJECT_DIR$/src/Client/ClientAmbassador.java" />
         <option value="$PROJECT_DIR$/CashDesk.xml" />
         <option value="$PROJECT_DIR$/src/Client/Client.java" />
-        <option value="$PROJECT_DIR$/src/Client/ClientAmbassador.java" />
-        <option value="$PROJECT_DIR$/src/Sklep/ShopAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" />
         <option value="$PROJECT_DIR$/src/Client/ClientFederate.java" />
+        <option value="$PROJECT_DIR$/RTI.rid" />
+        <option value="$PROJECT_DIR$/src/Sklep/ShopAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Sklep/ShopFederate.java" />
+        <option value="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" />
       </list>
     </option>
   </component>
@@ -117,9 +149,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1167" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -180,13 +213,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BKKD/Projekt pierwotny" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -209,6 +242,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ShopFederate">
+    <configuration name="CashDeskFederate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kasa.CashDeskFederate" />
+      <module name="CashDesk" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Kasa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="ClientFederate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.ClientFederate" />
       <module name="CashDesk" />
@@ -275,11 +319,13 @@
     <list>
       <item itemvalue="Application.ClientFederate" />
       <item itemvalue="Application.ShopFederate" />
+      <item itemvalue="Application.CashDeskFederate" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ShopFederate" />
         <item itemvalue="Application.ClientFederate" />
+        <item itemvalue="Application.CashDeskFederate" />
       </list>
     </recent_temporary>
   </component>
@@ -294,12 +340,27 @@
       <option name="presentableId" value="Default" />
       <updated>1543794204639</updated>
       <workItem from="1543794216291" duration="8169000" />
-      <workItem from="1544036220298" duration="73000" />
+      <workItem from="1544036220298" duration="15320000" />
     </task>
+    <task id="LOCAL-00001" summary="zmiany federatow (shop, client)">
+      <created>1544036447907</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544036447907</updated>
+    </task>
+    <task id="LOCAL-00002" summary="zmiany federatow (shop, client)">
+      <created>1544036475554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544036475554</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8242000" />
+    <option name="totallyTimeSpent" value="23489000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -311,24 +372,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.32947975" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3286638" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.3286638" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.33044317" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32947975" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.21875" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.34590518" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3286638" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4993046" visible="true" weight="0.20953101" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4993046" visible="true" weight="0.14765458" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32799247" />
       <window_info id="Structure" order="6" sideWeight="0.5006954" side_tool="true" weight="0.1625" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25567323" />
       <window_info id="UI Designer" order="1" />
@@ -340,42 +402,36 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32799247" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32893497" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.35532516" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1625" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Designer" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32954547" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32799247" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32893497" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -491,20 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticFederate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -527,27 +569,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Enum.java" />
-    <entry file="file://$PROJECT_DIR$/src/Client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CashDesk.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/portico.jar!/org/portico/impl/hla13/Rti13Ambassador.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="2275" selection-start-line="2275" selection-end-line="2275" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/portico.jar!/hla/rti/jlc/EncodingHelpers.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
@@ -562,10 +583,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sklep/ShopAmbassador.java">
+    <entry file="file://$PROJECT_DIR$/CashDesk.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="132" column="81" selection-start-line="132" selection-start-column="81" selection-end-line="132" selection-end-column="81" />
+        <state relative-caret-position="199">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/portico.jar!/org/portico/impl/hla13/Rti13Ambassador.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="2555" column="16" selection-start-line="2555" selection-start-column="16" selection-end-line="2555" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTI.rid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/ClientFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -574,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/ClientAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="59" />
+        <state relative-caret-position="1186">
+          <caret line="105" column="70" selection-start-line="105" selection-start-column="58" selection-end-line="105" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#929#930#0" expanded="true" />
@@ -586,10 +628,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/ClientFederate.java">
+    <entry file="file://$PROJECT_DIR$/src/Client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+        <state relative-caret-position="306">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sklep/ShopAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="151" column="60" selection-start-line="151" selection-start-column="60" selection-end-line="151" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -598,8 +647,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sklep/ShopFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="140" column="42" lean-forward="true" selection-start-line="140" selection-start-column="42" selection-end-line="141" selection-end-column="35" />
+        <state relative-caret-position="39">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -623,7 +692,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

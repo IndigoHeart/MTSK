@@ -1,12 +1,31 @@
 package Client;
 
 public class Client {
-    Boolean privileged;
-    int time_of_shopping;
+    private Boolean privileged;
+    private int timeOfShopping;
 
-    public Client(Boolean privi, int tos){
+    public Boolean getPrivileged() {
+        return privileged;
+    }
+
+    public void setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+    }
+
+    public int getTimeOfShopping() {
+        return timeOfShopping;
+    }
+
+    public void setTimeOfShopping(int timeOfShopping) {
+        this.timeOfShopping = timeOfShopping;
+    }
+
+    public Client(Boolean privi, int timeOfShopping){
         privileged = privi;
-        time_of_shopping = tos;
+
+        this.timeOfShopping = timeOfShopping;
         System.out.println("generated");
+
+
     }
 }
