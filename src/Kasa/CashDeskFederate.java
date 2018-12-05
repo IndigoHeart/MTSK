@@ -130,14 +130,13 @@ public class CashDeskFederate {
 
         //przejdz do kolejki publish interaction
         int przejdzDoKolejkiHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.przejdzDoKolejki" );
-        rtiamb.publishInteractionClass(przejdzDoKolejkiHandle);
-        //int privilegedHandle = rtiamb.getParameterHandle(przejdzDoKolejkiHandle, "InteractionRoot.")
+        rtiamb.subscribeInteractionClass(przejdzDoKolejkiHandle);
+        fedamb.przejdzDoKolejkiHandle=przejdzDoKolejkiHandle;
+
 
     }
 
-    private void sendInteractionprzejdzDoKolejki(double timeStep) throws RTIexception {
 
-    }
 
     private void advanceTime( double timestep ) throws RTIexception
     {
