@@ -1,5 +1,6 @@
 package Sklep;
 
+import Client.Client;
 import Client.ClientAmbassador;
 import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
@@ -11,13 +12,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class ShopFederate {
     private RTIambassador rtiamb;
     private ShopAmbassador fedamb;
 
-
+LinkedList<Client> klienciWsklepie =new LinkedList<Client>();
 
     public void runFederate() throws RTIexception {
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
@@ -59,10 +61,14 @@ public class ShopFederate {
 
         publishAndSubscribe();
 
+
+
         while (fedamb.running) {
             advanceTime(randomTime());
-            Shop Shop=new Shop(randomizePrivileg(20), (int)(25*randomTime()));
-            publishShop(Shop);
+            System.out.println(" klientów w sklepie jest "+klienciWsklepie.size());
+            //Shop Shop=new Shop(randomizePrivileg(20), (int)(25*randomTime()));
+            //publishShop(Shop);
+
         }
     }
 
@@ -70,6 +76,9 @@ public class ShopFederate {
         System.out.println( "ShopFederate   : " + message );
     }
 
+    void zarzadzaj(){
+
+    }
     private void waitForUser(){
         log( " >>>>>>>>>> Press Enter to Continue <<<<<<<<<<" );
         BufferedReader reader = new BufferedReader( new InputStreamReader(System.in) );
@@ -123,20 +132,19 @@ public class ShopFederate {
     }
 
     private void publishAndSubscribe() throws RTIexception{
-        int klientHandle = rtiamb.getObjectClassHandle("HLAobjectRoot.Shop");
-        int nrKolejkiHandle    = rtiamb.getAttributeHandle( "nrKolejki", klientHandle );
-        int liczbaProduktowHandle = rtiamb.getAttributeHandle("liczbaProduktow", klientHandle);
+        int klientHandle = rtiamb.getObjectClassHandle("HLAobjectRoot.Client");
+        int przywilejHandle    = rtiamb.getAttributeHandle( "przywilej", klientHandle );
+        int timeHandle = rtiamb.getAttributeHandle("time", klientHandle);
 
         AttributeHandleSet attributes =
                 RtiFactoryFactory.getRtiFactory().createAttributeHandleSet();
-        attributes.add( nrKolejkiHandle );
-        attributes.add(liczbaProduktowHandle);
+        attributes.add( przywilejHandle );
+        attributes.add(timeHandle);
 
-        rtiamb.publishObjectClass(klientHandle, attributes);
+        rtiamb.subscribeObjectClassAttributes(klientHandle,attributes);
 
-        int najkrotszaKolejkaHandle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.najkrotszaKolejka" );
-        fedamb.najkrotszaKolejkaHandle = najkrotszaKolejkaHandle;
-        rtiamb.subscribeInteractionClass(najkrotszaKolejkaHandle);
+
+
     }
 
 
@@ -161,16 +169,7 @@ public class ShopFederate {
         return 1 + r.nextInt(9);
     }
 
-    private void publishShop(Shop Shop) throws RTIexception{
-        int klientClassHandle = rtiamb.getObjectClassHandle("HLAobjectRoot.Shop");
-        int klientHandle = rtiamb.registerObjectInstance(klientClassHandle);
-        int przywilejHandle    = rtiamb.getAttributeHandle( "przywilej", klientClassHandle );
-        int timeHandle    = rtiamb.getAttributeHandle( "time", klientClassHandle );
-        SuppliedAttributes attributes = RtiFactoryFactory.getRtiFactory().createSuppliedAttributes();
 
-        rtiamb.updateAttributeValues( klientHandle, attributes, "klient attributes".getBytes());
-
-    }
 
     public static void main( String[] args ){
         try{

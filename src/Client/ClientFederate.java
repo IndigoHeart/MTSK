@@ -125,19 +125,17 @@ public class ClientFederate {
 
     private void publishAndSubscribe() throws RTIexception{
         int klientHandle = rtiamb.getObjectClassHandle("HLAobjectRoot.Client");
-        int nrKolejkiHandle    = rtiamb.getAttributeHandle( "nrKolejki", klientHandle );
-        int liczbaProduktowHandle = rtiamb.getAttributeHandle("liczbaProduktow", klientHandle);
+        int przywilejHandle    = rtiamb.getAttributeHandle( "przywilej", klientHandle );
+        int timeHandle    = rtiamb.getAttributeHandle( "time", klientHandle );
 
         AttributeHandleSet attributes =
                 RtiFactoryFactory.getRtiFactory().createAttributeHandleSet();
-        attributes.add( nrKolejkiHandle );
-        attributes.add(liczbaProduktowHandle);
+        attributes.add( przywilejHandle );
+        attributes.add( timeHandle );
 
         rtiamb.publishObjectClass(klientHandle, attributes);
 
-        int najkrotszaKolejkaHandle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.najkrotszaKolejka" );
-        fedamb.najkrotszaKolejkaHandle = najkrotszaKolejkaHandle;
-        rtiamb.subscribeInteractionClass(najkrotszaKolejkaHandle);
+
     }
 
 
@@ -169,6 +167,9 @@ public class ClientFederate {
         int timeHandle    = rtiamb.getAttributeHandle( "time", klientClassHandle );
         SuppliedAttributes attributes = RtiFactoryFactory.getRtiFactory().createSuppliedAttributes();
         byte[] przywilejValue = EncodingHelpers.encodeBoolean(client.privileged);
+        log(Integer.toString(client.time_of_shopping));
+        log(Boolean.toString(client.privileged));
+
         byte[] timeValue = EncodingHelpers.encodeInt(client.time_of_shopping);
         attributes.add(przywilejHandle, przywilejValue);
         attributes.add(timeHandle, timeValue);
