@@ -150,7 +150,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
     }
 
     private void manageCashDeskQueue(LinkedList<CashDesk> cashdeskList, Boolean privileged) {
-        if(cashdeskList.size()*queueMaxSize<fed.CountAllClients(cashdeskList)){
+        if(cashdeskList.size()*queueMaxSize < fed.CountAllClients(cashdeskList)){
             addClientToQueue(cashdeskList, privileged);
         }
         else{

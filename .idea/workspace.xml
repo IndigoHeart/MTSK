@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abfe42bc-3bcb-40e9-a806-dedb190aa1c5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kasa/CashDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDesk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" afterDir="false" />
     </list>
@@ -22,11 +21,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.48454157">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CashDeskFederate.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CashDeskFederate.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2414">
-                  <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+                <state relative-caret-position="520">
+                  <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -34,7 +33,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CashDesk.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CashDesk.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Kasa/CashDesk.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="160">
@@ -50,8 +49,8 @@
           <file leaf-file-name="CashDeskAmbassador.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="200" column="9" lean-forward="true" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+                <state relative-caret-position="700">
+                  <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#6250#6251#0" expanded="true" />
@@ -138,9 +137,9 @@
         <option value="$PROJECT_DIR$/RTI.rid" />
         <option value="$PROJECT_DIR$/src/Sklep/ShopAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Sklep/ShopFederate.java" />
-        <option value="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" />
         <option value="$PROJECT_DIR$/src/Kasa/CashDesk.java" />
         <option value="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" />
       </list>
     </option>
   </component>
@@ -345,7 +344,7 @@
       <option name="presentableId" value="Default" />
       <updated>1543794204639</updated>
       <workItem from="1543794216291" duration="8169000" />
-      <workItem from="1544036220298" duration="23502000" />
+      <workItem from="1544036220298" duration="25104000" />
     </task>
     <task id="LOCAL-00001" summary="zmiany federatow (shop, client)">
       <created>1544036447907</created>
@@ -375,11 +374,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544053672782</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="zmiany federatow (shop, client)">
+      <created>1544060339021</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544060339021</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31671000" />
+    <option name="totallyTimeSpent" value="33273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,16 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2414">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Kasa/CashDesk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -724,14 +720,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="200" column="9" lean-forward="true" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+        <state relative-caret-position="700">
+          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6250#6251#0" expanded="true" />
             <element signature="e#6289#6290#0" expanded="true" />
             <element signature="e#6816#6817#0" expanded="true" />
             <element signature="e#6858#6859#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

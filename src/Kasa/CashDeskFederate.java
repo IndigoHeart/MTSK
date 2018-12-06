@@ -66,7 +66,16 @@ public class CashDeskFederate {
 
 
         while (fedamb.running) {
-            advanceTime(randomTime());
+            //advanceTime(1);
+            //sendInteractionStatystyki();
+
+            for (int i=0;i<cashdeskList.size();i++) {
+                if(cashdeskList.get(i).getSuma()==0){
+
+                }
+                cashdeskList.get(i).
+
+            }
 
         }
     }
