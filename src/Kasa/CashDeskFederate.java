@@ -12,12 +12,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class CashDeskFederate {
     private RTIambassador rtiamb;
     private CashDeskAmbassador fedamb;
 
+    LinkedList<CashDesk> cashdeskList;
 
     public void runFederate() throws RTIexception {
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
@@ -41,6 +43,8 @@ public class CashDeskFederate {
         log( "Joined Federation as CashDeskFederate");
 
         rtiamb.registerFederationSynchronizationPoint( CashDeskAmbassador.READY_TO_RUN, null );
+
+        cashdeskList = new LinkedList<>();
 
         while( fedamb.isAnnounced == false ){
             rtiamb.tick();
@@ -136,8 +140,6 @@ public class CashDeskFederate {
 
     }
 
-
-
     private void advanceTime( double timestep ) throws RTIexception
     {
         fedamb.isAdvancing = true;
@@ -159,8 +161,6 @@ public class CashDeskFederate {
         return 1 + r.nextInt(9);
     }
 
-
-
     public static void main( String[] args ){
         try{
             new CashDeskFederate().runFederate();
@@ -169,4 +169,13 @@ public class CashDeskFederate {
             rtie.printStackTrace();
         }
     }
+
+    public int CountAllClients(LinkedList<CashDesk> list){
+        int sumAll=0;
+        for(int i=0; i<list.size();i++){
+            sumAll += list.get(i).suma;
+        }
+        return sumAll;
+    }
+
 }

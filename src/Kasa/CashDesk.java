@@ -6,6 +6,13 @@ public class CashDesk {
     int nonPrivilegedQueue;
     int suma;
 
+    public CashDesk() {
+        cashdeskNumber = 0;
+        privilegedQueue = 0;
+        nonPrivilegedQueue = 0;
+        suma = 0;
+    }
+
     public int getCashdeskNumber() {
         return cashdeskNumber;
     }

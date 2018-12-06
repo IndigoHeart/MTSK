@@ -6,6 +6,8 @@ import hla.rti.jlc.EncodingHelpers;
 import hla.rti.jlc.NullFederateAmbassador;
 import org.portico.impl.hla13.types.DoubleTime;
 
+import java.util.LinkedList;
+
 public class CashDeskAmbassador extends NullFederateAmbassador {
 
     public static final String READY_TO_RUN = "ReadyToRun";
@@ -22,6 +24,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
     protected boolean running 			 = true;
 
     protected int przejdzDoKolejkiHandle;
+    public static int queueMaxSize = 10;
     private CashDeskFederate fed;
 
 
@@ -132,6 +135,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
         if(interactionClass == przejdzDoKolejkiHandle){
             try{
                 Boolean privileged = EncodingHelpers.decodeBoolean(theInteraction.getValue(0));
+                manageCashDeskQueue(fed.cashdeskList ,privileged);
             }catch(ArrayIndexOutOfBounds ignored){ }
         }
 
@@ -143,5 +147,65 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
             }
         }
         log( builder.toString() );*/
+    }
+
+    private void manageCashDeskQueue(LinkedList<CashDesk> cashdeskList, Boolean privileged) {
+        if(cashdeskList.size()*queueMaxSize<fed.CountAllClients(cashdeskList)){
+            addClientToQueue(cashdeskList, privileged);
+        }
+        else{
+            openNewCashDesk(cashdeskList, privileged);
+        }
+    }
+
+    private void addClientToQueue(LinkedList<CashDesk> cdList, Boolean priv){
+        if(priv==true){
+            int smallestQueueNr = findSmallestPrivilegedQueue(cdList);
+            addPrivClient(cdList.get(smallestQueueNr));
+        }else{
+            int smallestQueueNr = findSmallestNonPrivilegedQueue(cdList);
+            addNonPrivClient(cdList.get(smallestQueueNr));
+        }
+    }
+
+    private int findSmallestPrivilegedQueue(LinkedList<CashDesk> cdList){
+        int queueNr=0;
+        for(int i=0; i<cdList.size()-1;i++){
+            if(cdList.get(i).getPrivilegedQueue() < cdList.get(i+1).getPrivilegedQueue()){
+                queueNr=i;
+            }else{
+                queueNr=i+1;
+            }
+        }
+        return queueNr;
+    }
+
+    private int findSmallestNonPrivilegedQueue(LinkedList<CashDesk> cdList){
+        int queueNr=0;
+        for(int i=0; i<cdList.size()-1;i++){
+            if(cdList.get(i).getSuma() < cdList.get(i+1).getSuma()){
+                queueNr=i;
+            }else{
+                queueNr=i+1;
+            }
+        }
+        return queueNr;
+    }
+
+    private void openNewCashDesk(LinkedList<CashDesk> cdList, Boolean priv){
+        cdList.add(new CashDesk());
+        if(priv==true){
+            cdList.getLast().addPrivilegedQueue();
+        }else{
+            cdList.getLast().addNonPrivilegedQueue();
+        }
+    }
+
+    private void addPrivClient(CashDesk cd){
+        cd.addPrivilegedQueue();
+    }
+
+    private void addNonPrivClient(CashDesk cd){
+        cd.addNonPrivilegedQueue();
     }
 }
