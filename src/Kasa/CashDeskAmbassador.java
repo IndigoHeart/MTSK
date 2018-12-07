@@ -122,6 +122,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
         // passing null as the time will let the other method know it
         // it from us, not from the RTI
         receiveInteraction(interactionClass, theInteraction, tag, null, null);
+        log("miau");
     }
 
     public void receiveInteraction( int interactionClass,
@@ -142,7 +143,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
     }
 
     private void manageCashDeskQueue(LinkedList<CashDesk> cashdeskList, Boolean privileged) {
-        if(cashdeskList.size()*queueMaxSize < fed.CountAllClients(cashdeskList)){
+        if(cashdeskList.size()*queueMaxSize > fed.CountAllClients(cashdeskList)){
             addClientToQueue(cashdeskList, privileged);
         }
         else{

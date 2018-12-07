@@ -25,7 +25,7 @@ public class CashDeskFederate {
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
         try{
             File fom = new File( "CashDesk.xml" );
-            rtiamb.createFederationExecution( "CashdeskCilentFederation",
+            rtiamb.createFederationExecution( "CashDeskClientFederation",
                     fom.toURI().toURL() );
             log( "Created Federation" );
         }
@@ -39,12 +39,13 @@ public class CashDeskFederate {
         }
 
         fedamb = new CashDeskAmbassador(this);
-        rtiamb.joinFederationExecution( "CashDeskFederate", "CashdeskCilentFederation", fedamb );
+        rtiamb.joinFederationExecution( "CashDeskFederate", "CashDeskClientFederation", fedamb );
         log( "Joined Federation as CashDeskFederate");
 
         rtiamb.registerFederationSynchronizationPoint( CashDeskAmbassador.READY_TO_RUN, null );
 
-        cashdeskList = new LinkedList<>();
+        cashdeskList = new LinkedList<CashDesk>();
+        cashdeskList.add(new CashDesk());
 
         while( fedamb.isAnnounced == false ){
             rtiamb.tick();
@@ -66,8 +67,11 @@ public class CashDeskFederate {
 
 
         while (fedamb.running) {
-            advanceTime(1);
+            advanceTime(40);
             //sendInteractionStatystyki();
+            for(int i=0; i < cashdeskList.size();i++){
+                System.out.println("suma w kasie " + cashdeskList.get(i).suma + " nr " + cashdeskList.get(i).getCashdeskNumber());
+            }
 
             for(int i=0; i < cashdeskList.size();i++){
                 manageCashDesk(cashdeskList.get(i));
@@ -83,18 +87,21 @@ public class CashDeskFederate {
             // x - liczba otwartych kas
             // y - limit kolejki do kasy
             // sumAllOpen - suma klientów we wszystkich kolejkach otwartych kas
-            while(fedamb.queueMaxSize*(fedamb.getOpenCashDesk(cashdeskList).size()-1) >=
-                    CountAllClients(fedamb.getOpenCashDesk(cashdeskList))){
-                LinkedList<CashDesk> openCashDesks = fedamb.getOpenCashDesk(cashdeskList);
-                int queueNr = fedamb.findSmallestNonPrivilegedQueue(openCashDesks);
-                Boolean flag = true;
-                while(flag){
-                    int i=0;
-                    if(cashdeskList.get(i).getCashdeskNumber()==openCashDesks.get(queueNr).getCashdeskNumber()){
-                        cashdeskList.get(i).setOpen(false);
-                        flag=false;
-                    }else{
-                        i++;
+            if(cashdeskList.size()>1) {
+                while (fedamb.queueMaxSize * (fedamb.getOpenCashDesk(cashdeskList).size() - 1) >=
+                        CountAllClients(fedamb.getOpenCashDesk(cashdeskList))) {
+                    LinkedList<CashDesk> openCashDesks = fedamb.getOpenCashDesk(cashdeskList);
+                    int queueNr = fedamb.findSmallestNonPrivilegedQueue(openCashDesks);
+                    Boolean flag = true;
+                    while (flag) {
+                        int i = 0;
+                        if (cashdeskList.get(i).getCashdeskNumber() == openCashDesks.get(queueNr).getCashdeskNumber()) {
+                            cashdeskList.get(i).setOpen(false);
+                            System.out.println("Zablokowano kolejkę nr " + cashdeskList.get(i).getCashdeskNumber());
+                            flag = false;
+                        } else {
+                            i++;
+                        }
                     }
                 }
             }
@@ -152,16 +159,7 @@ public class CashDeskFederate {
     }
 
     private void publishAndSubscribe() throws RTIexception{
-        int klientHandle = rtiamb.getObjectClassHandle("HLAobjectRoot.Client");
-        int przywilejHandle    = rtiamb.getAttributeHandle( "przywilej", klientHandle );
-        int timeHandle = rtiamb.getAttributeHandle("time", klientHandle);
 
-        AttributeHandleSet attributes =
-                RtiFactoryFactory.getRtiFactory().createAttributeHandleSet();
-        attributes.add( przywilejHandle );
-        attributes.add(timeHandle);
-
-        rtiamb.subscribeObjectClassAttributes(klientHandle,attributes);
 
         //przejdz do kolejki publish interaction
         int przejdzDoKolejkiHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.przejdzDoKolejki" );

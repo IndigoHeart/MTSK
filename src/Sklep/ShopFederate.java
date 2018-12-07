@@ -70,7 +70,7 @@ public class ShopFederate {
             System.out.println(" klientów w sklepie jest "+klienciWsklepie.size());
             //Shop Shop=new Shop(randomizePrivileg(20), (int)(25*randomTime()));
             //publishShop(Shop);
-            advanceTime(50);
+            advanceTime(10); //50
             sendInteractionprzejdzDoKolejki(fedamb.federateTime + fedamb.federateLookahead);
 
         }

@@ -9,16 +9,16 @@ public class CashDesk {
     int suma;
     int serviceTime;
     Boolean isOpen;
-    Random rm;
+    static Random rm = new Random();
     public static int ID = 0;
-
     public CashDesk() {
         cashdeskNumber = ++ID;
         privilegedQueue = 0;
         nonPrivilegedQueue = 0;
         suma = 0;
         isOpen = true;
-        serviceTime = rm.nextInt(10)+10;
+        //serviceTime = rm.nextInt(20)+10;
+        serviceTime = 100;
     }
 
     public int getCashdeskNumber() {
@@ -30,22 +30,26 @@ public class CashDesk {
     }
 
     public void addPrivilegedQueue() {
+        System.out.println("Dodanie uprzywilejowanego klienta do kasy " + cashdeskNumber);
         privilegedQueue++;
         sumaIncrement();
     }
 
     public void deletePrivilegedQueue() {
+        System.out.println("Uprzywilejowany klient obsluzony w kasie " + cashdeskNumber);
         privilegedQueue--;
         sumaDecrement();
         serviceTime = rm.nextInt(10)+10;
 }
 
     public void addNonPrivilegedQueue() {
+        System.out.println("Dodanie zwykłego klienta do kasy " + cashdeskNumber);
         nonPrivilegedQueue++;
         sumaIncrement();
     }
 
     public void deleteNonPrivilegedQueue() {
+        System.out.println("Zwykły klient obsluzony w kasie " + cashdeskNumber);
         nonPrivilegedQueue--;
         sumaDecrement();
         serviceTime = rm.nextInt(10)+10;
@@ -55,7 +59,7 @@ public class CashDesk {
         if(serviceTime==0){
             if(privilegedQueue>0)
                 deletePrivilegedQueue();
-            else
+            else if(nonPrivilegedQueue>0)
                 deleteNonPrivilegedQueue();
         }else
             serviceTime--;
