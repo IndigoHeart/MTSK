@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfe42bc-3bcb-40e9-a806-dedb190aa1c5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/GUI/GUIAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/ClientFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ClientFederate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Client/ClientFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Client/ClientFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Kasa/CashDeskFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CashDesk/Sklep/ShopFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CashDesk/Sklep/ShopFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GUIAmbasador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GUIFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sklep/ShopFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sklep/ShopFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Statystyka/StatisticAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatisticAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Statystyka/StatisticFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatisticFederate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,39 +32,14 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49875">
+    <splitter split-orientation="horizontal" split-proportion="0.48294243">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CashDeskFederate.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
+          <file leaf-file-name="StatisticAmbassador.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticAmbassador.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="284">
-                  <caret line="74" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#4071#4072#0" expanded="true" />
-                    <element signature="e#4112#4113#0" expanded="true" />
-                    <element signature="e#4153#4154#0" expanded="true" />
-                    <element signature="e#4224#4225#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GUIFederate.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GUI/GUIFederate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClientFederate.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Client/ClientFederate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="20">
-                  <caret line="107" selection-start-line="107" selection-end-line="107" />
+                <state relative-caret-position="366">
+                  <caret line="127" column="70" selection-start-line="126" selection-start-column="57" selection-end-line="127" selection-end-column="70" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -65,11 +47,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ShopFederate.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Sklep/ShopFederate.java">
+          <file leaf-file-name="StatisticFederate.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticFederate.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="166">
-                  <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+                <state relative-caret-position="219">
+                  <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -77,11 +59,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CashDesk.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Kasa/CashDesk.java">
+          <file leaf-file-name="ShopAmbassador.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Sklep/ShopAmbassador.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+                <state relative-caret-position="280">
+                  <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -90,15 +75,32 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="CashDeskAmbassador.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CashDeskAmbassador.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="191">
-                  <caret line="145" column="45" lean-forward="true" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+                <state relative-caret-position="406">
+                  <caret line="127" column="23" lean-forward="true" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#6971#6981#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GUIFederate.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/GUI/GUIFederate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GUIAmbassador.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/GUI/GUIAmbassador.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="142" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -116,13 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>przy</find>
-      <find>publishAndSubscribe</find>
-      <find>registerO</find>
-      <find>registerObject</find>
-      <find>&lt;objectClass</find>
-      <find>503</find>
-      <find>ref</find>
       <find>fed</find>
       <find>attribute</find>
       <find>tag</find>
@@ -134,7 +129,6 @@
       <find>cashdesk</find>
       <find>advanceTime</find>
       <find>publishClient</find>
-      <find>shop</find>
       <find>sum</find>
       <find>log</find>
       <find>klientów</find>
@@ -146,6 +140,14 @@
       <find>*</find>
       <find>count</find>
       <find>setopen</find>
+      <find>sendInteractionprzejdzDoKolejki</find>
+      <find>shop</find>
+      <find>randomtime</find>
+      <find>cou</find>
+      <find>gui</find>
+      <find>statisti</find>
+      <find>statistic</find>
+      <find>sklep</find>
     </findStrings>
     <replaceStrings>
       <replace>shop</replace>
@@ -170,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GUI/GUIAmbasador.java" />
         <option value="$PROJECT_DIR$/src/Klient/KlientAmbasador.java" />
         <option value="$PROJECT_DIR$/src/Klient/KlientFederate.java" />
         <option value="$PROJECT_DIR$/src/Klient/ClientFederate.java" />
@@ -183,9 +184,14 @@
         <option value="$PROJECT_DIR$/RTI.rid" />
         <option value="$PROJECT_DIR$/src/Kasa/CashDesk.java" />
         <option value="$PROJECT_DIR$/src/Client/ClientFederate.java" />
-        <option value="$PROJECT_DIR$/src/Sklep/ShopFederate.java" />
         <option value="$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Kasa/CashDeskFederate.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GUIAmbasador.java" />
+        <option value="$PROJECT_DIR$/src/Sklep/ShopFederate.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GUIAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GUIFederate.java" />
+        <option value="$PROJECT_DIR$/src/Statystyka/StatisticAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Statystyka/StatisticFederate.java" />
       </list>
     </option>
   </component>
@@ -396,7 +402,7 @@
       <updated>1543794204639</updated>
       <workItem from="1543794216291" duration="8169000" />
       <workItem from="1544036220298" duration="26328000" />
-      <workItem from="1544134318934" duration="24591000" />
+      <workItem from="1544134318934" duration="30852000" />
     </task>
     <task id="LOCAL-00001" summary="zmiany federatow (shop, client)">
       <created>1544036447907</created>
@@ -454,11 +460,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544155080763</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="zmiany federatow (shop, client)">
+      <created>1544163421814</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544163421814</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59088000" />
+    <option name="totallyTimeSpent" value="65349000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,6 +484,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3286638" />
@@ -482,12 +496,12 @@
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.21875" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.38254312" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.38254312" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3280757" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4993046" visible="true" weight="0.15458423" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4993046" visible="true" weight="0.17963752" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3275862" />
       <window_info id="Structure" order="6" sideWeight="0.5006954" side_tool="true" weight="0.1625" />
@@ -507,10 +521,10 @@
       <window_info id="Designer" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.38254312" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.38254312" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25567323" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4993046" visible="true" weight="0.15458423" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4993046" visible="true" weight="0.17963752" />
       <window_info id="Structure" order="6" sideWeight="0.5006954" side_tool="true" weight="0.1625" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3286638" />
@@ -620,7 +634,6 @@
           <caret line="138" column="52" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6971#6981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -713,27 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIAmbasador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Enum.java" />
     <entry file="jar://$PROJECT_DIR$/portico.jar!/hla/rti/jlc/EncodingHelpers.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -777,23 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sklep/ShopAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="151" column="60" selection-start-line="151" selection-start-column="60" selection-end-line="151" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CashDesk.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="58" column="52" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/portico.jar!/org/portico/impl/hla13/types/DoubleTime.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -819,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Kasa/CashDesk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -833,13 +801,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CashDesk.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="65" column="49" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="145" column="45" lean-forward="true" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+        <state relative-caret-position="406">
+          <caret line="127" column="23" lean-forward="true" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6971#6981#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -856,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kasa/CashDeskFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="74" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
+        <state relative-caret-position="193">
+          <caret line="72" column="92" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4071#4072#0" expanded="true" />
@@ -868,10 +842,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GUIAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="142" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sklep/ShopAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sklep/ShopFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="540">
+          <caret line="199" column="16" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GUIFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatisticAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="127" column="70" selection-start-line="126" selection-start-column="57" selection-end-line="127" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

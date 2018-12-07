@@ -1,16 +1,12 @@
-package Statystyka;
+package GUI;
 
-import Statystyka.StatisticFederate;
-import hla.rti.EventRetractionHandle;
-import hla.rti.LogicalTime;
-import hla.rti.ReceivedInteraction;
-import hla.rti.jlc.NullFederateAmbassador;
+import Client.Client;
+import hla.rti.*;
 import org.portico.impl.hla13.types.DoubleTime;
-import hla.rti.ReflectedAttributes;
 import hla.rti.jlc.EncodingHelpers;
-import hla.rti.ArrayIndexOutOfBounds;
+import hla.rti.jlc.NullFederateAmbassador;
 
-public class StatisticAmbassador extends NullFederateAmbassador {
+public class GUIAmbassador extends NullFederateAmbassador {
     public static final String READY_TO_RUN = "ReadyToRun";
     protected double federateTime        = 0.0;
     protected double federateLookahead   = 1.0;
@@ -24,12 +20,12 @@ public class StatisticAmbassador extends NullFederateAmbassador {
 
     protected boolean running 			 = true;
 
-    private StatisticFederate fed;
+    private GUIFederate fed;
 
     protected int liczbaWkolejkachHandle = 0;
     protected int liczbaOtwartychKasHandle = 0;
 
-    public StatisticAmbassador(StatisticFederate fed){
+    public GUIAmbassador(GUIFederate fed){
         this.fed = fed;
     }
 
@@ -57,14 +53,14 @@ public class StatisticAmbassador extends NullFederateAmbassador {
     public void announceSynchronizationPoint( String label, byte[] tag )
     {
         log( "Synchronization point announced: " + label );
-        if( label.equals(StatisticAmbassador.READY_TO_RUN) )
+        if( label.equals(GUIAmbassador.READY_TO_RUN) )
             this.isAnnounced = true;
     }
 
     public void federationSynchronized( String label )
     {
         log( "Federation Synchronized: " + label );
-        if( label.equals(StatisticAmbassador.READY_TO_RUN) )
+        if( label.equals(GUIAmbassador.READY_TO_RUN) )
             this.isReadyToRun = true;
     }
 

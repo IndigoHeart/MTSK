@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class CashDeskFederate {
@@ -68,7 +69,8 @@ public class CashDeskFederate {
 
         while (fedamb.running) {
             advanceTime(30);
-            //sendInteractionStatystyki();
+            sendInteractionliczbaWkolejkach(fedamb.federateTime+fedamb.federateLookahead);
+            sendInteractionliczbaOtwartychKas(fedamb.federateTime+fedamb.federateLookahead);
             for(int i=0; i < cashdeskList.size();i++){
                 System.out.println("suma w kasie " + cashdeskList.get(i).suma + " nr "
                         + cashdeskList.get(i).getCashdeskNumber()
@@ -130,6 +132,43 @@ public class CashDeskFederate {
         }
     }
 
+    private void sendInteractionliczbaWkolejkach(double timeStep) throws RTIexception {
+        try{
+            SuppliedParameters parameters =
+                    RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+
+            byte[] liczbaWkolejkach = EncodingHelpers.encodeInt(CountAllClients(cashdeskList));
+
+            int liczbaWkolejkachHandle = rtiamb.getInteractionClassHandle("InteractionRoot.liczbaWkolejkach");
+            int liczbaHandle = rtiamb.getParameterHandle( "liczbaWkolejkach", liczbaWkolejkachHandle );
+
+            parameters.add(liczbaHandle, liczbaWkolejkach);
+
+            LogicalTime time = convertTime( timeStep );
+            rtiamb.sendInteraction( liczbaWkolejkachHandle, parameters, "tag".getBytes(), time );
+        }catch (NoSuchElementException e){
+        }
+
+    }
+
+    private void sendInteractionliczbaOtwartychKas(double timeStep) throws RTIexception {
+        try{
+            SuppliedParameters parameters =
+                    RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+
+            byte[] liczbaOtwartychKas = EncodingHelpers.encodeInt(cashdeskList.size());
+
+            int liczbaOtwartychKasHandle = rtiamb.getInteractionClassHandle("InteractionRoot.liczbaOtwartychKas");
+            int liczbaHandle = rtiamb.getParameterHandle( "liczbaOtwartychKas", liczbaOtwartychKasHandle );
+
+            parameters.add(liczbaHandle, liczbaOtwartychKas);
+
+            LogicalTime time = convertTime( timeStep );
+            rtiamb.sendInteraction( liczbaOtwartychKasHandle, parameters, "tag".getBytes(), time );
+        }catch (NoSuchElementException e){
+        }
+
+    }
     private LogicalTime convertTime(double time ){
         // PORTICO SPECIFIC!!
         return new DoubleTime( time );
@@ -163,10 +202,17 @@ public class CashDeskFederate {
     private void publishAndSubscribe() throws RTIexception{
 
 
-        //przejdz do kolejki publish interaction
+        //przejdz do kolejki subscribe interaction
         int przejdzDoKolejkiHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.przejdzDoKolejki" );
         rtiamb.subscribeInteractionClass(przejdzDoKolejkiHandle);
         fedamb.przejdzDoKolejkiHandle=przejdzDoKolejkiHandle;
+
+        //liczba w kolejkach publish interaction
+        int liczbaWkolejkachHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.liczbaWkolejkach" );
+        rtiamb.publishInteractionClass(liczbaWkolejkachHandle);
+        //liczba liczba otwartych kas publish interaction
+        int liczbaOtwartychKasHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.liczbaOtwartychKas" );
+        rtiamb.publishInteractionClass(liczbaOtwartychKasHandle);
 
 
     }

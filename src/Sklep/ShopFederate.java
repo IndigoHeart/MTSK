@@ -80,9 +80,6 @@ public class ShopFederate {
         System.out.println( "ShopFederate   : " + message );
     }
 
-    void zarzadzaj(){
-
-    }
     private void waitForUser(){
         log( " >>>>>>>>>> Press Enter to Continue <<<<<<<<<<" );
         BufferedReader reader = new BufferedReader( new InputStreamReader(System.in) );
