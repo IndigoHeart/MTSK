@@ -1,16 +1,24 @@
 package Kasa;
 
+import java.util.Random;
+
 public class CashDesk {
     int cashdeskNumber;
     int privilegedQueue;
     int nonPrivilegedQueue;
     int suma;
+    int serviceTime;
+    Boolean isOpen;
+    Random rm;
+    public static int ID = 0;
 
     public CashDesk() {
-        cashdeskNumber = 0;
+        cashdeskNumber = ++ID;
         privilegedQueue = 0;
         nonPrivilegedQueue = 0;
         suma = 0;
+        isOpen = true;
+        serviceTime = rm.nextInt(10)+10;
     }
 
     public int getCashdeskNumber() {
@@ -29,7 +37,8 @@ public class CashDesk {
     public void deletePrivilegedQueue() {
         privilegedQueue--;
         sumaDecrement();
-    }
+        serviceTime = rm.nextInt(10)+10;
+}
 
     public void addNonPrivilegedQueue() {
         nonPrivilegedQueue++;
@@ -39,6 +48,17 @@ public class CashDesk {
     public void deleteNonPrivilegedQueue() {
         nonPrivilegedQueue--;
         sumaDecrement();
+        serviceTime = rm.nextInt(10)+10;
+    }
+
+    public void decrementServiceTime(){
+        if(serviceTime==0){
+            if(privilegedQueue>0)
+                deletePrivilegedQueue();
+            else
+                deleteNonPrivilegedQueue();
+        }else
+            serviceTime--;
     }
 
     public int getSuma() {
@@ -54,7 +74,7 @@ public class CashDesk {
     }
 
     public void sumaDecrement(){
-        suma++;
+        suma--;
     }
 
     public int getPrivilegedQueue() {
@@ -65,4 +85,19 @@ public class CashDesk {
         return nonPrivilegedQueue;
     }
 
+    public int getServiceTime() {
+        return serviceTime;
+    }
+
+    public void setServiceTime(int serviceTime) {
+        this.serviceTime = serviceTime;
+    }
+
+    public void setOpen(Boolean open) {
+        isOpen = open;
+    }
+
+    public Boolean getOpen() {
+        return isOpen;
+    }
 }

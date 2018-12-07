@@ -139,14 +139,6 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
             }catch(ArrayIndexOutOfBounds ignored){ }
         }
 
-        /*if(interactionClass == najkrotszaKolejkaHandle) {
-            try {
-                fed.numberQueue = EncodingHelpers.decodeInt(theInteraction.getValue(0));
-                builder.append(" NajkrotszaKolejka , number=" + fed.numberQueue);
-            } catch (ArrayIndexOutOfBounds ignored) {
-            }
-        }
-        log( builder.toString() );*/
     }
 
     private void manageCashDeskQueue(LinkedList<CashDesk> cashdeskList, Boolean privileged) {
@@ -168,10 +160,12 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
         }
     }
 
+    //sprawdz + dodawanie tylko do otwartych kas
     private int findSmallestPrivilegedQueue(LinkedList<CashDesk> cdList){
         int queueNr=0;
+        LinkedList<CashDesk> openCashDeskList = getOpenCashDesk(cdList);
         for(int i=0; i<cdList.size()-1;i++){
-            if(cdList.get(i).getPrivilegedQueue() < cdList.get(i+1).getPrivilegedQueue()){
+            if(openCashDeskList.get(i).getPrivilegedQueue() < openCashDeskList.get(i+1).getPrivilegedQueue()){
                 queueNr=i;
             }else{
                 queueNr=i+1;
@@ -180,15 +174,17 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
         return queueNr;
     }
 
-    private int findSmallestNonPrivilegedQueue(LinkedList<CashDesk> cdList){
+    //sprawdz + dodawanie tylko do otwartych kas
+    public int findSmallestNonPrivilegedQueue(LinkedList<CashDesk> cdList){
         int queueNr=0;
-        for(int i=0; i<cdList.size()-1;i++){
-            if(cdList.get(i).getSuma() < cdList.get(i+1).getSuma()){
+        LinkedList<CashDesk> openCashDeskList = getOpenCashDesk(cdList);
+        for(int i=0; i<openCashDeskList.size()-1;i++){
+            if(openCashDeskList.get(i).getSuma() < openCashDeskList.get(i+1).getSuma()){
                 queueNr=i;
             }else{
                 queueNr=i+1;
             }
-        }
+    }
         return queueNr;
     }
 
@@ -199,6 +195,15 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
         }else{
             cdList.getLast().addNonPrivilegedQueue();
         }
+    }
+
+    public LinkedList<CashDesk> getOpenCashDesk(LinkedList<CashDesk> cdList){
+        LinkedList<CashDesk> openCashDeskList = new LinkedList<CashDesk>();
+        for(int i=0; i<cdList.size();i++){
+            if(cdList.get(i).isOpen==true)
+                openCashDeskList.add(cdList.get(i));
+        }
+        return openCashDeskList;
     }
 
     private void addPrivClient(CashDesk cd){

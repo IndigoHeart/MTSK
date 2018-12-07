@@ -19,7 +19,7 @@ public class CashDeskFederate {
     private RTIambassador rtiamb;
     private CashDeskAmbassador fedamb;
 
-    LinkedList<CashDesk> cashdeskList;
+    public LinkedList<CashDesk> cashdeskList;
 
     public void runFederate() throws RTIexception {
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
@@ -66,27 +66,49 @@ public class CashDeskFederate {
 
 
         while (fedamb.running) {
-            //advanceTime(1);
+            advanceTime(1);
             //sendInteractionStatystyki();
 
-            for (int i=0;i<cashdeskList.size();i++) {
-                if(cashdeskList.get(i).getSuma()==0){
-
+            for(int i=0; i < cashdeskList.size();i++){
+                manageCashDesk(cashdeskList.get(i));
+            }
+            for(int i=0; i < cashdeskList.size();i++){
+                if(cashdeskList.get(i).suma==0 && cashdeskList.size() > 1){
+                    cashdeskList.remove(i);
                 }
-                cashdeskList.get(i).
-
             }
 
+            //sprawdzamy czy trzeba zablokować kasę bo jest ich za dużo
+            // (x-1)*y>=sumAllOpen
+            // x - liczba otwartych kas
+            // y - limit kolejki do kasy
+            // sumAllOpen - suma klientów we wszystkich kolejkach otwartych kas
+            while(fedamb.queueMaxSize*(fedamb.getOpenCashDesk(cashdeskList).size()-1) >=
+                    CountAllClients(fedamb.getOpenCashDesk(cashdeskList))){
+                LinkedList<CashDesk> openCashDesks = fedamb.getOpenCashDesk(cashdeskList);
+                int queueNr = fedamb.findSmallestNonPrivilegedQueue(openCashDesks);
+                Boolean flag = true;
+                while(flag){
+                    int i=0;
+                    if(cashdeskList.get(i).getCashdeskNumber()==openCashDesks.get(queueNr).getCashdeskNumber()){
+                        cashdeskList.get(i).setOpen(false);
+                        flag=false;
+                    }else{
+                        i++;
+                    }
+                }
+            }
         }
+    }
+
+    private void manageCashDesk(CashDesk cd){
+        cd.decrementServiceTime();
     }
 
     private void log( String message ){
         System.out.println( "CashDeskFederate   : " + message );
     }
 
-    void zarzadzaj(){
-
-    }
     private void waitForUser(){
         log( " >>>>>>>>>> Press Enter to Continue <<<<<<<<<<" );
         BufferedReader reader = new BufferedReader( new InputStreamReader(System.in) );
