@@ -143,8 +143,8 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
     }
 
     private void manageCashDeskQueue(LinkedList<CashDesk> cashdeskList, Boolean privileged) {
-        if(cashdeskList.size()*queueMaxSize > fed.CountAllClients(cashdeskList)){
-            addClientToQueue(cashdeskList, privileged);
+        if(cashdeskList.size()*queueMaxSize > fed.CountAllClients(getOpenCashDesk(cashdeskList))){
+            addClientToQueue(getOpenCashDesk(cashdeskList), privileged);
         }
         else{
             openNewCashDesk(cashdeskList, privileged);
@@ -165,7 +165,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
     private int findSmallestPrivilegedQueue(LinkedList<CashDesk> cdList){
         int queueNr=0;
         LinkedList<CashDesk> openCashDeskList = getOpenCashDesk(cdList);
-        for(int i=0; i<cdList.size()-1;i++){
+        for(int i=0; i<openCashDeskList.size()-1;i++){
             if(openCashDeskList.get(i).getPrivilegedQueue() < openCashDeskList.get(i+1).getPrivilegedQueue()){
                 queueNr=i;
             }else{

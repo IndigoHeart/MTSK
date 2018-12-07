@@ -67,10 +67,12 @@ public class CashDeskFederate {
 
 
         while (fedamb.running) {
-            advanceTime(40);
+            advanceTime(30);
             //sendInteractionStatystyki();
             for(int i=0; i < cashdeskList.size();i++){
-                System.out.println("suma w kasie " + cashdeskList.get(i).suma + " nr " + cashdeskList.get(i).getCashdeskNumber());
+                System.out.println("suma w kasie " + cashdeskList.get(i).suma + " nr "
+                        + cashdeskList.get(i).getCashdeskNumber()
+                        + " isOpen " + cashdeskList.get(i).getOpen());
             }
 
             for(int i=0; i < cashdeskList.size();i++){
@@ -88,7 +90,7 @@ public class CashDeskFederate {
             // y - limit kolejki do kasy
             // sumAllOpen - suma klientów we wszystkich kolejkach otwartych kas
             if(cashdeskList.size()>1) {
-                while (fedamb.queueMaxSize * (fedamb.getOpenCashDesk(cashdeskList).size() - 1) >=
+                while (fedamb.queueMaxSize * (fedamb.getOpenCashDesk(cashdeskList).size() - 1) >
                         CountAllClients(fedamb.getOpenCashDesk(cashdeskList))) {
                     LinkedList<CashDesk> openCashDesks = fedamb.getOpenCashDesk(cashdeskList);
                     int queueNr = fedamb.findSmallestNonPrivilegedQueue(openCashDesks);

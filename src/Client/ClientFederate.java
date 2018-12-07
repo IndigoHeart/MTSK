@@ -152,7 +152,7 @@ public class ClientFederate {
 
     private double randomTime(){
         Random r = new Random();
-        return (double)(300 + r.nextInt(10)); //1 na 300
+        return (double)(30 + r.nextInt(10)); //1 na 300
     }
 
     private int randomProductNumber(){
