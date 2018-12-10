@@ -141,7 +141,7 @@ public class CashDeskAmbassador extends NullFederateAmbassador {
         }
 
     }
-
+    //iloscKolejek*queueMaxSize > allClient ale tylko z otwartych
     private void manageCashDeskQueue(LinkedList<CashDesk> cashdeskList, Boolean privileged) {
         if(cashdeskList.size()*queueMaxSize > fed.CountAllClients(getOpenCashDesk(cashdeskList))){
             addClientToQueue(getOpenCashDesk(cashdeskList), privileged);

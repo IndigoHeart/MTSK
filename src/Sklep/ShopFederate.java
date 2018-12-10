@@ -68,8 +68,6 @@ public class ShopFederate {
         while (fedamb.running) {
             advanceTime(randomTime());
             System.out.println(" klientów w sklepie jest "+klienciWsklepie.size());
-            //Shop Shop=new Shop(randomizePrivileg(20), (int)(25*randomTime()));
-            //publishShop(Shop);
             advanceTime(1); //50
             sendInteractionprzejdzDoKolejki(fedamb.federateTime + fedamb.federateLookahead);
 
@@ -151,6 +149,7 @@ public class ShopFederate {
 
     }
 
+    // do jakiej kolejki ma iść
     public Boolean goToQueue(){
             return klienciWsklepie.remove().getPrivileged();
     }

@@ -71,15 +71,18 @@ public class CashDeskFederate {
             advanceTime(30);
             sendInteractionliczbaWkolejkach(fedamb.federateTime+fedamb.federateLookahead);
             sendInteractionliczbaOtwartychKas(fedamb.federateTime+fedamb.federateLookahead);
+
+            //wypisywanie
             for(int i=0; i < cashdeskList.size();i++){
                 System.out.println("suma w kasie " + cashdeskList.get(i).suma + " nr "
                         + cashdeskList.get(i).getCashdeskNumber()
                         + " isOpen " + cashdeskList.get(i).getOpen());
             }
-
+            //manageKasy
             for(int i=0; i < cashdeskList.size();i++){
                 manageCashDesk(cashdeskList.get(i));
             }
+            //usuwanie kas które suma == 0 ale nie pierwszej
             for(int i=0; i < cashdeskList.size();i++){
                 if(cashdeskList.get(i).suma==0 && cashdeskList.size() > 1){
                     cashdeskList.remove(i);

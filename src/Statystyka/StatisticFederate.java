@@ -61,7 +61,8 @@ public class StatisticFederate {
 
 
         while (fedamb.running) {
-            advanceTime(1);
+            advanceTime(100);
+            System.out.println("Aktualnie mamy otwarte " + liczbaOtwartychKas + " kolejki i przebywa w nich " + liczbaWkolejkach);
         }
     }
 
@@ -125,9 +126,11 @@ public class StatisticFederate {
         //przejdz do kolejki publish interaction
         int liczbaWkolejkachHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.liczbaWkolejkach" );
         rtiamb.subscribeInteractionClass(liczbaWkolejkachHandle);
+        fedamb.liczbaWkolejkachHandle = liczbaWkolejkachHandle;
 
         int liczbaOtwartychKasHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.liczbaOtwartychKas" );
         rtiamb.subscribeInteractionClass(liczbaOtwartychKasHandle);
+        fedamb.liczbaOtwartychKasHandle = liczbaOtwartychKasHandle;
     }
 
     private void advanceTime( double timestep ) throws RTIexception

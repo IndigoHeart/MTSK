@@ -12,6 +12,10 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.NoSuchElementException;
 import java.util.Random;
+import org.knowm.xchart.QuickChart;
+import org.knowm.xchart.SwingWrapper;
+import org.knowm.xchart.XYChart;
+import sun.java2d.pipe.SpanShapeRenderer;
 
 public class GUIFederate {
     private RTIambassador rtiamb;
@@ -60,10 +64,13 @@ public class GUIFederate {
 
         publishAndSubscribe();
 
-
+        SimpleRealTime SRT = new SimpleRealTime();
+        SimpleRealTime SRT2 = new SimpleRealTime();
 
         while (fedamb.running) {
-            advanceTime(1);
+            advanceTime(100);
+            SRT.UpdateChart(liczbaWkolejkach);
+            SRT2.UpdateChart(liczbaOtwartychKas);
         }
     }
 
@@ -127,9 +134,11 @@ public class GUIFederate {
         //przejdz do kolejki publish interaction
         int liczbaWkolejkachHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.liczbaWkolejkach" );
         rtiamb.subscribeInteractionClass(liczbaWkolejkachHandle);
+        fedamb.liczbaWkolejkachHandle = liczbaWkolejkachHandle;
 
         int liczbaOtwartychKasHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.liczbaOtwartychKas" );
         rtiamb.subscribeInteractionClass(liczbaOtwartychKasHandle);
+        fedamb.liczbaOtwartychKasHandle = liczbaOtwartychKasHandle;
     }
 
     private void advanceTime( double timestep ) throws RTIexception

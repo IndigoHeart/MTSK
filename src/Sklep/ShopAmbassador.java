@@ -27,8 +27,6 @@ public class ShopAmbassador extends NullFederateAmbassador {
 
     private ShopFederate fed;
 
-    protected int najkrotszaKolejkaHandle = 0;
-
     public ShopAmbassador(ShopFederate fed){
         this.fed = fed;
     }
@@ -130,6 +128,7 @@ public class ShopAmbassador extends NullFederateAmbassador {
         builder.append( "\n" );
         try
         {
+            //dekodowane dane
             boolean d = EncodingHelpers.decodeBoolean(theAttributes.getValue(0));
             int czas = EncodingHelpers.decodeInt(theAttributes.getValue(1));
 
@@ -142,10 +141,8 @@ public class ShopAmbassador extends NullFederateAmbassador {
                 // print the attribute value
                 builder.append( ", attributeValue=" );
                 if(i==0)
-                builder.append(d
-                         );
-                if(i==1)builder.append(czas
-                         );
+                builder.append(d);
+                if(i==1)builder.append(czas);
                 builder.append( "\n" );
 
         }
@@ -155,17 +152,12 @@ public class ShopAmbassador extends NullFederateAmbassador {
         {
             // won't happen
         }
-
-
         log( builder.toString() );
     }
     public void receiveInteraction( int interactionClass,
                                     ReceivedInteraction theInteraction,
                                     byte[] tag )
     {
-        // just pass it on to the other method for printing purposes
-        // passing null as the time will let the other method know it
-        // it from us, not from the RTI
         receiveInteraction(interactionClass, theInteraction, tag, null, null);
     }
 
@@ -176,13 +168,5 @@ public class ShopAmbassador extends NullFederateAmbassador {
                                     EventRetractionHandle eventRetractionHandle )
     {
         StringBuilder builder = new StringBuilder( "Interaction Received:" );
-        /*if(interactionClass == najkrotszaKolejkaHandle) {
-            try {
-                fed.numberQueue = EncodingHelpers.decodeInt(theInteraction.getValue(0));
-                builder.append(" NajkrotszaKolejka , number=" + fed.numberQueue);
-            } catch (ArrayIndexOutOfBounds ignored) {
-            }*
-        }
-        log( builder.toString() );*/
     }
 }
