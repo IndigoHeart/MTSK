@@ -143,5 +143,6 @@ public class StatisticAmbassador extends NullFederateAmbassador {
             } catch (ArrayIndexOutOfBounds ignored) {
             }
         }
+        //log("Liczba osob w kolejkach " + fed.liczbaWkolejkach + " a otwartych kas jest " + fed.liczbaOtwartychKas);
     }
 }
